@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_down_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-12 08:44+0000\n"
+"PO-Revision-Date: 2022-12-12 08:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Afficher Nom"
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__display_dpa_text
+msgid "Display down payment amount in letters on report"
+msgstr "Afficher le montant en toutes lettres dans le PDF"
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__down_payment_amount
+msgid "Down payment amount"
+msgstr "Montant de l'acompte"
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__down_payment_amount_text
+msgid "Down payment amount in letters"
+msgstr "Montant de l'acompte en toutes lettres"
+
+#. module: sale_order_down_payment
+#: model_terms:ir.ui.view,arch_db:sale_order_down_payment.report_saleorder_document
+msgid "Down payment:"
+msgstr "Acompte :"
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_order_down_payment
+#: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sale_order_down_payment
+#: model:ir.model,name:sale_order_down_payment.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"

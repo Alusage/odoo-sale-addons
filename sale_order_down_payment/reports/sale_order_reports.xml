@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+  <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+    <xpath expr="//p[@t-field='doc.note']" position="before">
+      <p t-if="doc.down_payment_amount"><b>Down payment: <span t-field='doc.down_payment_amount'/></b><t t-if="doc.display_dpa_text"> (<span t-field='doc.down_payment_amount_text'/>)</t></p>
+    </xpath>
+  </template>
+  
+</odoo>
