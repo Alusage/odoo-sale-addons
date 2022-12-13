@@ -13,7 +13,7 @@
       <field name="note" position="before">
         <field name="down_payment_amount" attrs="{'invisible':[('down_payment_amount','&lt;=',0.0)]}"/>
         <field name="display_dpa_text" attrs="{'invisible':[('down_payment_amount','&lt;=',0.0)]}"/>
-        <field name="down_payment_amount_text" attrs="{'invisible':[('display_dpa_text','=',False)]}"/>
+        <field name="down_payment_amount_text" attrs="{'invisible':['|',('display_dpa_text','=',False),('down_payment_amount','&lt;=',0.0)]}"/>
       </field>
     </field>
   </record>
