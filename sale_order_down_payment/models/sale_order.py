@@ -10,7 +10,7 @@ class SaleOrder(models.Model):
         string="Down payment amount", compute="get_down_payment_amount"
     )
     display_dpa_text = fields.Boolean(
-        string="Display down payment amount in letters on report", default=True
+        string="Display down payment amount in letters on report", default=False
     )
     down_payment_amount_text = fields.Char(
         string="Down payment amount in letters", compute="get_dpa_text"
