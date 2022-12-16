@@ -18,34 +18,34 @@ msgstr ""
 #. module: sale_order_down_payment
 #: model:ir.model,name:sale_order_down_payment.model_res_config_settings
 msgid "Config Settings"
-msgstr "Paramètres de configuration"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__display_name
 msgid "Display Name"
-msgstr "Afficher Nom"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_res_config_settings__default_display_dpa_text
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__display_dpa_text
 msgid "Display down payment amount in letters on report"
-msgstr "Afficher le montant en toutes lettres dans le PDF"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__down_payment_amount
 msgid "Down payment amount"
-msgstr "Montant de l'acompte"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order__down_payment_amount_text
 msgid "Down payment amount in letters"
-msgstr "Montant de l'acompte en toutes lettres"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model_terms:ir.ui.view,arch_db:sale_order_down_payment.report_saleorder_document
 msgid "Down payment:"
-msgstr "Acompte :"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_res_config_settings__id
@@ -57,15 +57,15 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_res_config_settings____last_update
 #: model:ir.model.fields,field_description:sale_order_down_payment.field_sale_order____last_update
 msgid "Last Modified on"
-msgstr "Dernière modification le"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: code:addons/sale_order_down_payment/models/sale_order.py:0
 #, python-format
 msgid "Please, set a pricelist"
-msgstr "Veuillez renseigner une liste de prix"
+msgstr ""
 
 #. module: sale_order_down_payment
 #: model:ir.model,name:sale_order_down_payment.model_sale_order
 msgid "Sales Order"
-msgstr "Bon de commande"
+msgstr ""

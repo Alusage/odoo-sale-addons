@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import odoo
 from odoo import api, fields, models, _
+from num2words import num2words
 
 
 class SaleOrder(models.Model):
@@ -35,16 +36,23 @@ class SaleOrder(models.Model):
                     amount = line0.value_amount
             order.down_payment_amount = amount
 
-    @api.depends("down_payment_amount")
+    @api.depends("down_payment_amount", "display_dpa_text", "currency_id")
     def get_dpa_text(self):
         """
         Converts the down payment amount to text, using the sale order currency built-in method.
         """
+        def _num2words(number, lang):
+            try:
+                return num2words(number, lang=lang).title()
+            except NotImplementedError:
+                return num2words(number, lang='en').title()
         for order in self:
             odpa = order.down_payment_amount
             cur_id = order.currency_id
             dpa_text = ""
-            if odpa and cur_id:
-                dpa_text = cur_id.amount_to_text(odpa)
+            if odpa and order.display_dpa_text:
+                if cur_id:
+                    dpa_text = cur_id.amount_to_text(odpa)
+                else:
+                    dpa_text = _("Please, set a pricelist")
             order.down_payment_amount_text = dpa_text
-

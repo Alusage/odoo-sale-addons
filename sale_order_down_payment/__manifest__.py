@@ -18,6 +18,7 @@
     ],
     'data': [
         'reports/sale_order_reports.xml',
+        'views/res_config_settings.xml',
         'views/sale_order.xml',
     ],
     'demo': [],
