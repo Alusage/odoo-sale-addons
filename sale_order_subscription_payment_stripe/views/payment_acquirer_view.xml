@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_payment_acquirer_subscription_form_stripe_inherit" model="ir.ui.view">
+        <field name="name">Payment Acquirer Subscription Stripe</field>
+        <field name="model">payment.acquirer</field>
+        <field name="priority">50</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name='subscription_ok'/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

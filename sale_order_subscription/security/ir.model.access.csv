@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_subscription_schedule,schedule.schedule,model_sale_subscription_schedule,base.group_user,1,1,1,1
+access_sale_subscription_schedule_account_user,schedule.schedule.account_user,model_sale_subscription_schedule,account.group_account_invoice,1,1,1,1
+access_sale_subscription_schedule_sale_salesman,schedule.schedule.sale_salesman,model_sale_subscription_schedule,sales_team.group_sale_salesman,1,1,1,1
+access_sale_subscription_type,schedule.schedule,model_sale_subscription_type,base.group_user,1,0,0,0
+access_sale_subscription_type_account_user,schedule.schedule.account_user,model_sale_subscription_type,account.group_account_invoice,1,1,1,1
+access_sale_subscription_type_sale_salesman,schedule.schedule.sale_salesman,model_sale_subscription_type,sales_team.group_sale_salesman,1,0,0,0
+access_sale_subscription_type_sale_manager,schedule.schedule.sale_manager,model_sale_subscription_type,sales_team.group_sale_manager,1,0,0,0

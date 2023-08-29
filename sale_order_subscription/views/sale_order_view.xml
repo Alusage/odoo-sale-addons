@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+  <record id="sale_order_form" model="ir.ui.view">
+    <field name="name">Sale Order form view</field>
+    <field name="model">sale.order</field>
+    <field name="priority">50</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[@name='button_box']" position="after">
+        <field name="is_subscription_order" invisible="1"/>
+        <field name="has_subscription" invisible="1"/>
+      </xpath>
+      <field name="payment_term_id" position="before">
+      <span colspan="2" class="info" attrs="{'invisible': ['|',('is_subscription_order','=', True),('has_subscription','=', False)]}"><em>You can setup subscription by choosing one type</em></span>
+        <field name="subscription_type" attrs="{'readonly': [('subscription_state', 'not in', ['draft', False])], 'invisible': [('has_subscription','=', False)]}"/>
+        <field name="date_init" attrs="{'readonly': [('subscription_state', 'not in', ['draft', False])], 'invisible': [('is_subscription_order','=',False)], 'required': [('is_subscription_order','!=', False)]}"/>
+        <field name="exec_init" attrs="{'readonly': [('subscription_state', 'not in', ['draft', False])], 'invisible': [('is_subscription_order','=',False)], 'required': [('is_subscription_order','!=', False)]}"/>
+        <field name="subscription_payment_acquirer_id" options="{'no_create': True, 'no_create_edit':True}" domain="[('subscription_ok', '=', True)]" attrs="{'readonly': [('subscription_state', 'not in', ['draft', False])], 'invisible': [('is_subscription_order','=',False)]}"/>
+        <div class="o_row" name="subscription_actions">
+        <button name="action_subscription_schedule" type="object" string="Schedule Subscription" help="Schedule subscription documents" class="btn-link mb-1 px-0" icon="fa-refresh" confirm="This will create the scheduled subscription documents" attrs="{'invisible': ['|', '|', ('subscription_type','=', False), ('has_subscription','=', False),('subscription_state', 'in', ['running', 'done', 'cancel'])]}"/>
+        <button name="action_subscription_cancel" type="object" string="Cancel Subscription" help="Cancel subscription" class="btn-link mb-1 px-0" icon="fa-ban" confirm="This will cancel the scheduled subscription" attrs="{'invisible': ['|', '|', ('subscription_type','=', False), ('has_subscription','=', False),('subscription_state', 'in', ['draft', 'done', 'cancel'])]}"/>
+        </div>
+        </field>
+      <xpath expr="//header" position="after">
+        <div class="alert alert-info" role="alert" style="margin-bottom:0px;" attrs="{'invisible': ['|', ('is_subscription_order','=', True), ('has_subscription','=', False)]}">You have <bold>a least one product</bold> that can be subscribed for this order</div>
+      </xpath>
+      <xpath expr="//notebook" position="inside">
+       <page string="Subscription Lines" name="subscription_lines" attrs="{'invisible': [('subscription_state','=', 'draft')]}">
+        <field name="subscription_schedule_ids" nolabel="1">
+          <tree editable="bottom">
+            <field name="date"/>
+            <field name="template_invoice_id" invisible="1"/>
+            <field name="invoice_id"/>
+            <field name="status" widget="badge" decoration-success="status in ['created']"/>
+            <field name="payment_state" widget="badge" decoration-danger="payment_state == 'not_paid'" decoration-warning="payment_state in ('partial', 'in_payment')" decoration-success="payment_state in ('paid', 'reversed')" attrs="{'invisible': [('payment_state', 'in', ('invoicing_legacy'))]}"/>
+          </tree>
+        </field>
+       </page>
+      </xpath>
+      <xpath expr="//div[@name='button_box']" position="after">
+        <field name="subscription_state" invisible="1"/>
+        <field name="subscription_state" help="Subscription State" attrs="{'invisible': ['|', ('subscription_state', 'not in', ['running', 'done', 'cancel']), ('state', '=', 'cancel')]}" class="float-end fs-6" style="float: right !important;" widget="badge" decoration-info="subscription_state in ['draft']" decoration-success="subscription_state in ['running','done']" decoration-danger="subscription_state in ['cancel']"/>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="sale_order_subscription_action" model="ir.actions.act_window">
+        <field name="name">Subscriptions</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">kanban,tree,form,pivot,graph,activity</field>
+        <field name="context">{}</field>
+        <field name="domain">[('is_subscription_order', '=', True)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new subscription
+            </p><p>
+                Create subscriptions to manage recurring invoicing and payments.
+            </p><p>
+                Subscriptions can be automatically generated from sales orders in Sales
+            </p>
+        </field>
+    </record>
+
+  <menuitem  action="sale_order_subscription_action" id="menu_sale_order_subscription" name="Subscriptions" parent="sale.sale_order_menu" sequence="2"/>
+    
+</odoo>

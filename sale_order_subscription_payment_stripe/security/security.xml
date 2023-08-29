@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+
+    <record id="payment_token_invoice_user_rule" model="ir.rule">
+        <field name="name">Invoice User Access Payment Tokens</field>
+        <field name="model_id" ref="model_payment_token"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('partner_id.company_id', '=', False), ('partner_id.company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="payment_transaction_invoice_user_rule" model="ir.rule">
+        <field name="name">Invoice User Access Payment Transaction </field>
+        <field name="model_id" ref="model_payment_token"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('acquirer_id.company_id', '=', False), ('acquirer_id.company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

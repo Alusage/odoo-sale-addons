@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inherit subscription form view for the add fields -->
+    <record id="view_subscription_form_stripe_inherit" model="ir.ui.view">
+        <field name="name">Sale Order form view Subscription Stripe</field>
+        <field name="model">sale.order</field>
+        <field name="priority">50</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="subscription_payment_acquirer_id" position="after">
+                <field name="payment_provider" invisible="1"/>
+                <field name="payment_token_id" options="{'no_open':True,'no_create':True}" domain="[('partner_id', '=', partner_id)]" attrs="{'invisible': [('payment_provider', '!=', 'stripe')]}"/>
+            </field>
+            <xpath expr="//div[@name='subscription_actions']" position="inside">
+                <button name="action_show_subscription_info" type="object" string="Subscription Logs" groups="base.group_no_one" help="Show stripe subscription info in odoo logs" class="btn-link mb-1 px-0" icon="fa-refresh" attrs="{'invisible': ['|', '|', ('subscription_type','=', False), ('has_subscription','=', False),('subscription_state', 'in', ['draft', 'cancel'])]}"/>
+                <button name="action_get_latest_invoice" type="object" string="Latest Invoice Logs" groups="base.group_no_one" help="Show stripe latest invoice in odoo logs" class="btn-link mb-1 px-0" icon="fa-refresh" attrs="{'invisible': ['|', '|', ('subscription_type','=', False), ('has_subscription','=', False),('subscription_state', 'in', ['draft', 'cancel'])]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

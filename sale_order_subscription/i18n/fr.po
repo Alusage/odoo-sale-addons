@@ -1,0 +1,365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_order_subscription
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-29 19:42+0000\n"
+"PO-Revision-Date: 2023-08-29 19:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_subscription
+#: code:addons/sale_order_subscription/models/sale_order.py:0
+#, python-format
+msgid "%s %s"
+msgstr "%s %s"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid ""
+"<span colspan=\"2\" class=\"info\" attrs=\"{'invisible': "
+"['|',('is_subscription_order','=', True),('has_subscription','=', "
+"False)]}\"><em>You can setup subscription by choosing one type</em></span>"
+msgstr ""
+"<span colspan=\"2\" class=\"info\" attrs=\"{'invisible': "
+"['|',('is_subscription_order','=', True),('has_subscription','=', "
+"False)]}\"><em>Vous pouvez configurer un abonnement en selectionnant un type</em></span>"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__subscription_payment_acquirer_id
+msgid "Automatic payment"
+msgstr "Paiement Automatique"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_order__subscription_state__cancel
+msgid "Cancel"
+msgstr "Annulé"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Cancel Subscription"
+msgstr "Annuler l'abonnement"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Cancel subscription"
+msgstr "Annuler l'abonnement"
+
+#. module: sale_order_subscription
+#: model_terms:ir.actions.act_window,help:sale_order_subscription.sale_order_subscription_action
+msgid "Create a new subscription"
+msgstr "Créer un nouvel abonement"
+
+#. module: sale_order_subscription
+#: model_terms:ir.actions.act_window,help:sale_order_subscription.sale_order_subscription_action
+msgid "Create subscriptions to manage recurring invoicing and payments."
+msgstr "Créer un abonnement pour gérer les factures et les paiements récurrents"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_schedule__status__created
+msgid "Created"
+msgstr "Créé"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__create_uid
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__create_uid
+msgid "Created by"
+msgstr "Créé Par"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__create_date
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__create_date
+msgid "Created on"
+msgstr "Créé Le"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_type__unit__day
+msgid "Days"
+msgstr "Jours"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_account_move__display_name
+#: model:ir.model.fields,field_description:sale_order_subscription.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:sale_order_subscription.field_product_template__display_name
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__display_name
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_order__subscription_state__done
+msgid "Done"
+msgstr "Terminé"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_order__subscription_state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__interval
+msgid "Duration"
+msgstr "Durée"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__invoice_id
+msgid "Generated invoice"
+msgstr "Facture générée"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__has_subscription
+msgid "Has Subscription"
+msgstr "Abonnement possible"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_account_move__id
+#: model:ir.model.fields,field_description:sale_order_subscription.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:sale_order_subscription.field_product_template__id
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__id
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__is_subscription_order
+msgid "IS Subscription"
+msgstr "Est un abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__template_invoice_id
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_account_move____last_update
+#: model:ir.model.fields,field_description:sale_order_subscription.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:sale_order_subscription.field_product_template____last_update
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order____last_update
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule____last_update
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__write_uid
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__write_uid
+msgid "Last Updated by"
+msgstr "Modifié par"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__write_date
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__write_date
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_type__unit__month
+msgid "Months"
+msgstr "Mois"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_schedule__status__not_created
+msgid "Not Created"
+msgstr "Non disponible"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Intermédiaire de paiement"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__payment_state
+msgid "Payment Status"
+msgstr "Status du paiement"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_product_template
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,help:sale_order_subscription.field_sale_subscription_type__interval
+msgid "Recurence Interval"
+msgstr "Interval"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__exec_init
+msgid "Recurring Number"
+msgstr "Nombre de récurrence"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_order__subscription_state__running
+msgid "Running"
+msgstr "En cours"
+
+#. module: sale_order_subscription
+#: model:ir.actions.server,name:sale_order_subscription.ir_cron_subscription_queue_ir_actions_server
+#: model:ir.cron,cron_name:sale_order_subscription.ir_cron_subscription_queue
+#: model:ir.cron,name:sale_order_subscription.ir_cron_subscription_queue
+msgid "Sale Subscription: Process queue"
+msgstr "Abonnements: Traiter la file d'attente"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__date
+msgid "Schedule Date"
+msgstr "Date prévue"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Schedule Subscription"
+msgstr "Planifier l'abonnement"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Schedule subscription documents"
+msgstr "Générer les échéances"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__date_init
+msgid "Start Date"
+msgstr "Date de début"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__subscription_state
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__status
+msgid "Status"
+msgstr "Status"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_payment_acquirer__subscription_ok
+#: model:ir.model.fields,field_description:sale_order_subscription.field_product_product__subscription_ok
+#: model:ir.model.fields,field_description:sale_order_subscription.field_product_template__subscription_ok
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_schedule__order_id
+msgid "Subscription"
+msgstr "Abonnement"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Subscription Lines"
+msgstr "Lignes d'abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_sale_subscription_schedule
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__subscription_schedule_ids
+msgid "Subscription Schedule"
+msgstr "Echéance(s)"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "Subscription State"
+msgstr "Etat de l'abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.model,name:sale_order_subscription.model_sale_subscription_type
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__subscription_type
+msgid "Subscription Type"
+msgstr "Type d'abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_order__subscription_note
+msgid "Subscription infos"
+msgstr "Infos sur l'abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.actions.act_window,name:sale_order_subscription.sale_order_subscription_action
+#: model:ir.ui.menu,name:sale_order_subscription.menu_sale_order_subscription
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+#. module: sale_order_subscription
+#: model_terms:ir.actions.act_window,help:sale_order_subscription.sale_order_subscription_action
+msgid ""
+"Subscriptions can be automatically generated from sales orders in Sales"
+msgstr ""
+"Les abonnements peuvent être automatiquements générés depuis les devis"
+
+#. module: sale_order_subscription
+#: model:ir.model.constraint,message:sale_order_subscription.constraint_sale_subscription_type_subscription_interval
+msgid "The subscription interval has to be greater or equal to 0."
+msgstr "L'interval d'échéance doit est supérieur ou égal à 0"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "This will cancel the scheduled subscription"
+msgstr "Vous allez annuler l'abonnement et l'échéancier associé"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "This will create the scheduled subscription documents"
+msgstr "Vous aller créer l'échéancier d'abonnement"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,field_description:sale_order_subscription.field_sale_subscription_type__unit
+msgid "Unit"
+msgstr "Unité"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_type__unit__week
+msgid "Weeks"
+msgstr "Semaines"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields.selection,name:sale_order_subscription.selection__sale_subscription_type__unit__year
+msgid "Years"
+msgstr "Années"
+
+#. module: sale_order_subscription
+#: code:addons/sale_order_subscription/models/sale_order.py:0
+#, python-format
+msgid "You cannot delete an active subscription!"
+msgstr "Vous ne pouvez pas supprimer un abonement actif !"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "You have"
+msgstr "Vous avez"
+
+#. module: sale_order_subscription
+#: model:ir.model.fields,help:sale_order_subscription.field_sale_order__subscription_payment_acquirer_id
+msgid "You need a payment acquierer if you want automated payment"
+msgstr "Un intermédiaire de paiement est nécéssaire pour les paiements automatiques"
+
+#. module: sale_order_subscription
+#: code:addons/sale_order_subscription/models/sale_order.py:0
+#, python-format
+msgid "You should create at least on invoice for this order before !"
+msgstr "Vous devez créer au moins une facture pour cette commande avant de lancer l'abonement !"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "a least one product"
+msgstr "au moins un produit"
+
+#. module: sale_order_subscription
+#: model_terms:ir.ui.view,arch_db:sale_order_subscription.sale_order_form
+msgid "that can be subscribed for this order"
+msgstr "qui permet l'activation d'un abonement"
