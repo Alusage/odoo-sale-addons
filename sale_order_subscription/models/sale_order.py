@@ -88,7 +88,7 @@ class SaleOrder(models.Model):
     def unlink(self):
         if any(self.filtered(lambda s: s.subscription_state == "running")):
             raise UserError(_('You cannot delete an active subscription!'))
-        return super(Subscription, self).unlink()
+        return super(SaleOrder, self).unlink()
 
 class SaleRecurrenceType(models.Model):
     _name = "sale.subscription.type"
